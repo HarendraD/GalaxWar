@@ -1,9 +1,15 @@
-const canvas=document.getElementById("game");
-const ctx=canvas.getContext("2d");
+var canvas=document.getElementById("game");
+var ctx=canvas.getContext("2d");
 
-const background= new Image();
-background.src="images/background.png";
+canvas.width = 1000;
+canvas.height = 600;
+
+var background = new Image();
+background.src="images/space.png";
+console.log(background);
 
 function game(){
-    
+    ctx.drawImage(background,0,0,canvas.width,canvas.height);
 }
+
+setInterval(game,1000/60);
